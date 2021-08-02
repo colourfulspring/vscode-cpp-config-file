@@ -4,12 +4,17 @@
     "window.zoomLevel": 1.2,
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }",
     "actionButtons": {
-        "defaultColor": "white", // Can also use string color names.
+        "defaultColor": "white",
+        "loadNpmCommands": false,
         "commands": [
             {
+                "name": "Build Cpp",
+                "color": "white",
+                "command": "g++ ${fileBasename} -g -o ${fileBasenameNoExtension};",
+            },{
                 "name": "Run Cpp",
                 "color": "white",
-                "command": "make; ./Solution",
+                "command": "./${fileBasenameNoExtension}"
             }
         ]
     },
@@ -90,3 +95,4 @@
         "variant": "cpp"
     }
 }
+
